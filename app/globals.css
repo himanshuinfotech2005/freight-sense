@@ -157,7 +157,26 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    background: #030b14;
+  }
   body {
     @apply bg-background text-foreground;
+    background-image: radial-gradient(circle at 80% 0%, color-mix(in oklab, var(--primary) 8%, transparent), transparent 32rem), linear-gradient(135deg, #030b14, #061321 55%, #081a2b);
   }
 }
+
+.nav-wave::before {
+  content: '';
+  position: absolute;
+  inset: -80% 35% -80% -35%;
+  border-radius: 999px;
+  background: radial-gradient(circle, color-mix(in oklab, var(--primary) 24%, transparent), transparent 65%);
+  opacity: 0;
+  transform: scale(.5);
+  transition: opacity .35s ease, transform .5s ease;
+}
+.nav-wave:hover::before,
+.nav-active::before { opacity: 1; transform: scale(1); }
+.nav-wave > * { position: relative; z-index: 1; }
+.nav-active { background: linear-gradient(100deg, color-mix(in oklab, var(--primary) 18%, transparent), transparent); box-shadow: inset 2px 0 var(--primary), 0 0 22px color-mix(in oklab, var(--primary) 8%, transparent); }
