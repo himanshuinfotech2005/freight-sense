@@ -3,7 +3,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'VoyageIQ · Maritime intelligence',
+  title: 'FREIGHTSENSE · Maritime intelligence',
   description: 'Intelligent freight forecasting and vessel chartering command center.',
   generator: 'v0.app',
   icons: {
