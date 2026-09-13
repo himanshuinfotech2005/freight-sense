@@ -122,43 +122,32 @@
 }
 
 [data-slot='card'] {
-  border-color: #d5dae3;
-  background: #ffffff;
-  border-radius: 0.75rem;
-  box-shadow: 0 1px 3px rgb(15 23 42 / 0.06);
+  border-color: var(--border);
+  background: var(--card);
+  box-shadow: 0 1px 3px rgb(15 23 42 / 0.04), 0 8px 24px rgb(15 23 42 / 0.035);
 }
 [data-slot='card']:hover {
-  border-color: #c4cdd9;
-  box-shadow: 0 2px 6px rgb(15 23 42 / 0.08);
+  border-color: color-mix(in oklab, var(--primary) 24%, var(--border));
+  box-shadow: 0 4px 16px rgb(15 23 42 / 0.07);
 }
 
 aside {
-  background: #ffffff !important;
-  border-color: #d5dae3 !important;
+  background: var(--sidebar) !important;
+  border-color: var(--sidebar-border) !important;
 }
 .nav-wave::before { display: none; }
 .nav-active {
-  background: #e7f0fb;
-  box-shadow: inset 3px 0 #0066a6;
-  color: #0066a6 !important;
+  background: color-mix(in oklab, var(--primary) 9%, transparent);
+  box-shadow: inset 3px 0 var(--primary);
 }
 
-h1 { font-size: clamp(1.55rem, 3vw, 2rem); font-weight: 700; letter-spacing: -.03em; color: #0f172a; }
+h1 { font-size: clamp(1.8rem, 3vw, 2.25rem); font-weight: 700; letter-spacing: -.035em; color: var(--foreground); }
 h2 { letter-spacing: -.02em; }
 button { transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease; }
-button:hover { transform: none; }
+button:hover { transform: translateY(-1px); }
 button:active { transform: translateY(0); }
-button.bg-primary, button[class*='bg-primary'] { background: #0066a6; box-shadow: 0 1px 2px rgb(15 23 42 / 0.12); }
+button.bg-primary, button[class*='bg-primary'] { background: var(--primary); box-shadow: 0 2px 5px rgb(37 99 235 / 0.18); }
 button.bg-primary::after, button[class*='bg-primary']::after { display: none; }
-
-/* Enterprise workspace overrides: restrained surfaces, semantic accents, and dense alignment. */
-body { background: #f5f7fb; }
-main { background: #f5f7fb; }
-header { background: #ffffff !important; border-color: #d5dae3 !important; backdrop-filter: none !important; }
-[data-slot='card'] .text-primary { color: #0066a6; }
-[data-slot='badge'] { border-radius: 0.4rem; font-weight: 600; letter-spacing: .02em; }
-select, input { border-color: #d5dae3; border-radius: .5rem; }
-.nav-wave { border-radius: .5rem; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
