@@ -1,5 +1,5 @@
-import VoyageIQDashboard from '@/components/voyageiq-dashboard'
+import { FreightsenseRoute, routePages } from '@/components/freightsense-route'
 
 export default function Home() {
-  return <VoyageIQDashboard />
+  return <FreightsenseRoute page={routePages.overview} />
 }
