@@ -168,3 +168,81 @@ select, input { border-color: #d5dae3; border-radius: .5rem; }
 
 select, input { background-color: var(--background); }
 ::selection { background: color-mix(in oklab, var(--primary) 20%, transparent); }
+
+/* FREIGHTSENSE enterprise workspace: calm, light, information-first surfaces. */
+:root, .dark {
+  --background: #f5f7fa;
+  --foreground: #172033;
+  --card: #ffffff;
+  --card-foreground: #172033;
+  --popover: #ffffff;
+  --popover-foreground: #172033;
+  --primary: #0877b9;
+  --primary-foreground: #ffffff;
+  --secondary: #eef2f6;
+  --secondary-foreground: #172033;
+  --muted: #f1f4f7;
+  --muted-foreground: #64748b;
+  --accent: #eaf3f9;
+  --accent-foreground: #075985;
+  --border: #d8dee8;
+  --input: #cbd5e1;
+  --ring: #0877b9;
+  --chart-1: #0877b9;
+  --chart-2: #009b78;
+  --chart-3: #64748b;
+  --chart-4: #f59e0b;
+  --chart-5: #f97316;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #172033;
+  --sidebar-primary: #0877b9;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eaf3f9;
+  --sidebar-accent-foreground: #075985;
+  --sidebar-border: #d8dee8;
+  --sidebar-ring: #0877b9;
+}
+
+body, main { background: #f5f7fa !important; }
+main { min-height: 100vh; }
+header { height: 64px !important; padding-inline: 24px !important; box-shadow: 0 1px 2px rgb(15 23 42 / .04); }
+header .text-sm.font-medium { color: #172033; font-weight: 650; }
+header [data-slot='badge'] { background: #eaf3f9 !important; border-color: #b9d9ec !important; color: #075985 !important; }
+aside { width: 248px !important; background: #fff !important; box-shadow: 1px 0 0 #d8dee8; }
+aside > div:first-child { height: 76px !important; padding-inline: 20px !important; }
+aside .size-9 { width: 32px; height: 32px; border-radius: 8px; background: #0f2b46 !important; box-shadow: none !important; }
+aside .font-mono { font-family: var(--font-sans), ui-sans-serif, sans-serif; letter-spacing: -.02em; color: #172033; }
+aside .text-primary { color: #0877b9 !important; }
+aside nav { padding: 18px 12px !important; gap: 2px !important; }
+aside nav p { padding-inline: 12px; margin-bottom: 8px; color: #94a3b8; }
+.nav-wave { min-height: 36px; border-radius: 6px !important; color: #64748b !important; font-size: 13px !important; }
+.nav-wave:hover { background: #f5f7fa !important; color: #172033 !important; }
+.nav-active { background: #eaf3f9 !important; box-shadow: inset 3px 0 #0877b9 !important; color: #075985 !important; font-weight: 600; }
+.nav-active svg { color: #0877b9 !important; }
+[data-slot='card'] { border: 1px solid #d8dee8 !important; border-radius: 10px !important; background: #fff !important; box-shadow: 0 1px 2px rgb(15 23 42 / .04) !important; }
+[data-slot='card']:hover { border-color: #c5cfdb !important; box-shadow: 0 3px 10px rgb(15 23 42 / .07) !important; }
+[data-slot='card'] [class*='bg-primary/'] { background: #eaf3f9 !important; }
+[data-slot='card'] [class*='shadow-[0_0_'] { box-shadow: none !important; }
+main > div > div { max-width: 1500px; }
+main h1 { color: #172033 !important; font-size: clamp(1.55rem, 2vw, 2rem) !important; }
+main h2, main h3 { color: #172033; }
+main p { color: #64748b; }
+main .text-primary { color: #0877b9 !important; }
+main .text-amber-400, main .text-amber-300 { color: #b45309 !important; }
+main .text-emerald-300, main .text-emerald-400 { color: #047857 !important; }
+main .bg-amber-400, main .bg-amber-500 { background: #f59e0b !important; }
+main .bg-emerald-400, main .bg-emerald-500 { background: #009b78 !important; }
+main .bg-primary { background: #0f2b46 !important; }
+main .bg-primary\/5, main .bg-primary\/10, main .bg-primary\/15 { background: #f3f8fb !important; }
+main .border-primary\/25, main .border-primary\/30, main .border-primary\/40 { border-color: #b9d9ec !important; }
+main button { border-radius: 6px; }
+main button.bg-primary { color: #fff !important; }
+main button:hover { transform: none !important; }
+main select, main input { min-height: 38px; border-color: #cbd5e1 !important; background: #fff !important; color: #172033 !important; }
+main table thead { background: #f8fafc; color: #475569; }
+main table tbody tr:hover { background: #f8fafc; }
+main table th { font-weight: 600; letter-spacing: .05em; }
+main .rounded-full.border-8 { border-color: #f59e0b !important; box-shadow: none !important; }
+main .rounded-full.border-8 .text-amber-300 { color: #b45309 !important; }
+
+@media (max-width: 1023px) { aside { width: 280px !important; } header { padding-inline: 16px !important; } }
